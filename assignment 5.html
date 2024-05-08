@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    form {
+      max-width: 400px;
+      margin: 20px auto;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="registrationForm">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required pattern="[A-Za-z]+" onkeypress="validateInput(event)">
+    
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required pattern="[A-Za-z]+" onkeypress="validateInput(event)">
+    
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required min="20" max="60">
+    
+    <label for="mobileNumber">Mobile Number:</label>
+    <input type="text" id="mobileNumber" name="mobileNumber" required pattern="\d{3}-\d{2}-\d{3}" onkeypress="validateInput(event)">
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required onkeypress="validateInput(event)">
+    
+    <label for="userId">User ID:</label>
+    <input type="text" id="userId" name="userId" required minlength="5" maxlength="7" pattern="[A-Za-z_]+" onkeypress="validateInput(event)">
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required minlength="8" onkeypress="validateInput(event)">
+    
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" required onkeypress="validateInput(event)">
+
+    <button type="button" onclick="validateForm()">Submit</button>
+    <button type="button" onclick="clearForm()">Clear</button>
+  </form>
+
+  <script>
+      function validateInput(event) {
+      // Additional validation for specific input fields
+      const inputElement = event.target;
+      const inputValue = inputElement.value;
+
+      // Example: Validate mobile number pattern
+      if (inputElement.id === "mobileNumber" && !/\d{3}-\d{2}-\d{3}/.test(inputValue)) {
+        alert("Please provide a valid Mobile Number!");
+        return false;
+      }
+    }
+
+    function validateForm() {
+      // Add JavaScript validation logic based on the requirements mentioned
+      // For simplicity, you can display alerts for each validation point
+
+      const age = document.getElementById("age").value;
+      if (age < 20) {
+        alert("You are too young for the registration");
+        return;
+      } else if (age > 60) {
+        alert("You are too old for the registration");
+        return;
+      }
+
+      // Add more validations as needed
+    }
+
+    function clearForm() {
+      document.getElementById("registrationForm").reset();
+    }
+  </script>
+</body>
+</html>

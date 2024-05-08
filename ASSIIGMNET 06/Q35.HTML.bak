@@ -1,0 +1,23 @@
+<html>
+<head>
+<script type="text/javascript">
+function confirmation()
+{ 
+var answer = confirm("Leave the website?");
+if (answer)
+{ 
+alert("Thanks for visiting us!!!");
+window.location = "http://www.kln.ac.lk/";
+}
+else{ 
+alert(""); 
+}
+}
+</script>
+</head>
+<body >
+<form>
+<input type="button" onclick="confirmation()" value="Leave">
+</form>
+</body>
+</html>

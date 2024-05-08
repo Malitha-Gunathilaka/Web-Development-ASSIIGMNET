@@ -1,0 +1,22 @@
+<html>
+<body>
+<script type="text/javascript">
+var num;
+
+
+num=parseInt(prompt("Addition of 12 and 8 is?"));
+if(num=num1-num2){
+	document.write(" Your answer is:"+num);
+	document.write(" Your answer is correct");
+	document.write(" CONGRATULATIONS!");
+}else(){
+	ans = num2-num1;
+	document.write(" Your answer is:"+ans);
+}
+
+
+
+document.write("The asummation of positive number is"+sum);
+</script>
+</body>
+</html>

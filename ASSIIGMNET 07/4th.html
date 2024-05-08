@@ -1,0 +1,62 @@
+<html>
+<head>
+<style>
+#question{
+padding-left:20px;
+}
+#ans{
+padding-left:-20px;
+margin-bottom:50px;
+}
+h3{
+padding-left:20px
+}
+</style>
+<script type="text/javascript">
+function one(){
+var x = document.getElementById("one").value;
+if(x == 24)
+document.getElementById("ans1").innerHTML = "Correct";
+else
+document.getElementById("ans1").innerHTML = "Answer is incorrect";
+}
+function two(){
+var x = document.getElementById("two").value;
+if(x == 61)
+document.getElementById("ans2").innerHTML = "Correct";
+else
+document.getElementById("ans2").innerHTML = "Answer is incorrect";
+}
+function three(){
+var x = document.getElementById("three").value;
+if(x == 3)
+document.getElementById("ans3").innerHTML = "Correct";
+else
+document.getElementById("ans3").innerHTML = "Answer is incorrect";
+}
+</script>
+</head>
+<body>
+<h3><small>Solve this!!</small></h3>
+<p id="question">
+<b>01) 8x3+3/3-1</b><br><br>
+<input type="text" id="one"><br><br>
+<input type="button" onclick="one()" value="Submit the Answer"/>
+<p id="ans1"></p>
+</p>
+<h3><small>Solve this!!</small></h3>
+<p id="question">
+<b>02) 7x9-3x4+10</b><br><br>
+<input type="text" id="two"><br><br>
+<input type="button" onclick="two()" value="Submit the Answer"/>
+<p id="ans2"></p>
+</p>
+<h3><small>Solve this!!</small></h3>
+<p id="question">
+<b>02) Scientists recently name three new forms of matter.<br> How many forms of matter are there now?</b><br><br>
+<input type="text" id="three"><br><br>
+<input type="button" onclick="three()" value="Submit the Answer"/>
+<p id="ans3"></p>
+</p>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<head>
+<script type="text/javascript">
+function conv() {
+var x = document.getElementById("tempf").value;
+document.getElementById("tempc").value = ((x - 32) * 5/9);
+}
+</script>
+</head>
+<body>
+<i><u>Fahrenheit to Celsius converter</u></i>
+<table>
+<tr>
+<td>Enter a temperature (in F)</td>
+<td><input type="text" id="tempf"></td>
+</tr>
+<tr>
+<td colspan="2" align="right"><input type="button" onclick="conv()" value="Convert F to C"/></td>
+</tr>
+<tr>
+<td>Temperature (in C)</td>
+<td><input type="text" id="tempc"></td>
+</tr>
+</table>
+</body>
+</html>

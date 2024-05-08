@@ -1,0 +1,24 @@
+<html>
+<head>
+<script type="text/javascript">
+function big(){
+document.getElementById('myImage').style.height = "80%";
+document.getElementById('myImage').style.width = "60%";
+document.getElementById('x').style.color = "red";
+document.getElementById('cm').style.display = "inline";
+}
+function small(){
+document.getElementById('myImage').style.height = "50%";
+document.getElementById('myImage').style.width = "30%";
+document.getElementById('x').style.color = "black";
+document.getElementById('cm').style.display = "none";
+}
+</script>
+</head>
+<body onload="small()">
+<h2 id ="x"><center>
+<img id="myImage" onmouseover="big()" onmouseout="small()" border="0"
+src="images (1).jfif" width="50%" height="50%"><br>
+OMG COST32532 Students!!!<br><br><input id="cm" type="button" onclick="" value="Click Me!!!"></center></h2>
+</body>
+</html>

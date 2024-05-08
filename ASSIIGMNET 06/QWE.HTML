@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition Quiz</title>
+</head>
+<body>
+
+<button onclick="addAndCheck()">Next</button>
+
+<script>
+    // Function to add two numbers and check user input
+    function addAndCheck() {
+        // Prompt user for the first number
+        var num1 = prompt("Enter the first number:");
+
+        // Prompt user for the second number
+        var num2 = prompt("Enter the second number:");
+
+        // Convert user inputs to numbers
+        num1 = parseFloat(num1);
+        num2 = parseFloat(num2);
+
+        // Calculate the correct sum
+        var correctSum = num1 + num2;
+
+        // Prompt user for their answer
+        var userAnswer = prompt("What is the sum of " + num1 + " and " + num2 + "?");
+
+        // Convert user answer to a number
+        userAnswer = parseFloat(userAnswer);
+
+        // Check if the user's answer is correct
+        if (userAnswer === correctSum) {
+            document.write(" Your answer is:"+correctSum );
+			document.write("<BR>");
+			document.write(" Your answer is correct!<BR>");
+			document.write("CONGRATULATIONS!!!<BR>");
+        } else {
+            document.write(" Your answer is:"+userAnswer );
+			document.write("<BR>");
+			document.write(" Your answer is wrong!<BR>");
+			document.write(" correct answer is:"+correctSum );
+        }
+    }
+</script>
+
+</body>
+</html>

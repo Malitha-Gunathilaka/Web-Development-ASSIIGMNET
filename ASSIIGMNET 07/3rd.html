@@ -1,0 +1,30 @@
+<html>
+<head>
+<script>
+function highlight(x) {
+x.style.background = "pink";
+}
+function resetHighlight(x) {
+x.style.background = "";
+}
+function Submit(event) {
+event.preventDefault();
+var x = document.getElementById("email").value;
+if (x == "")
+alert("You have entered an invalid email address!");
+else {
+alert("Registered!!");
+document.getElementById("email").value = x + "@gmail.com";
+}
+}
+</script>
+</head>
+<body>
+<form onsubmit="Submit(event)">
+<b>Input an Email and Submit</b><br>
+<input type="text" id="email" name="email" onfocus="highlight(this)" onblur="resetHighlight(this)">
+<br><br>
+<button type="submit" id="submit" onfocus="highlight(this)" onblur="resetHighlight(this)">Submit</button>
+</form>
+</body>
+</html>
